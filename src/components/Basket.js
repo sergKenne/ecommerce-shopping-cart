@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class Basket extends Component {
 
     render() {
-      const headMessage = this.props.cartProducts.length 
+      const headMessage = this.props.cartProducts.length
                             ? 
                                 `You have ${this.props.cartProducts.length} items in the basket.`
                             : `Basket is empty`;

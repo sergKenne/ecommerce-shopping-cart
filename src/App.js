@@ -22,11 +22,13 @@ class App extends Component {
   }
 
   componentDidMount() {
+   
     this.setState({ 
         products: db.products,
         filteredProducts: db.products,
-        cartProducts: JSON.parse(localStorage.getItem('cartItems')) ,
-        sum: formatPrice(JSON.parse(localStorage.getItem('sum')))  
+        cartProducts: JSON.parse(localStorage.getItem('cartItems')) || [] ,
+        sum: formatPrice(JSON.parse(localStorage.getItem('sum')) || 0)
+        
     });
   }
 
